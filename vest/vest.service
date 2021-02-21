@@ -1,0 +1,13 @@
+[Unit]
+Description=Sound Vest
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/tmp
+ExecStart=/home/pi/src/vest.py
+Restart=on-failure # or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target

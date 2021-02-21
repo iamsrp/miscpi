@@ -1,0 +1,13 @@
+[Unit]
+Description=Fortunate
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/tmp
+ExecStart=/home/pi/fortune/fortunate.py
+Restart=on-failure # or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
